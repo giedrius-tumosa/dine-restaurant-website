@@ -1,10 +1,10 @@
-import FormReservation from "./components/forms/FormReservation";
 import "./styles/App.scss";
+import EventsSection from "./components/pageSections/EventsSection";
 
 function App() {
   return (
     <>
-      <FormReservation />
+      <EventsSection />
     </>
   );
 }

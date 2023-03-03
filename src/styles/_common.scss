@@ -11,3 +11,24 @@ textarea {
   color: red;
   font-size: 0.7rem;
 }
+
+.hidden {
+  display: none;
+}
+
+.hide_appear {
+  animation-name: hide-animation;
+  animation-duration: 0.5s;
+}
+
+@keyframes hide-animation {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}

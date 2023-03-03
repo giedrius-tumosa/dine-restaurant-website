@@ -1,10 +1,12 @@
 import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useState } from "react";
+import GuestNumberHandler from "./formComponents/GuestNumberHandler";
 
 const FormReservation = () => {
   const [currentYear] = useState(new Date().getFullYear());
   const [formError, setFormError] = useState("");
+  const [numOfGuests, setNumOfGuests] = useState(1);
 
   const validationSchema = Yup.object().shape({
     name: Yup.string().min(2, "Too short.").max(20, "Too long. ").required("Name is required. "),
@@ -28,16 +30,12 @@ const FormReservation = () => {
         otherwise: (schema) =>
           schema.oneOf([12, 1, 2, 3, 4, 5], "Reservation hours: 09:00AM-5:00PM. "),
       })
-      .required("Year is required. "),
+      .required("Hour is required. "),
     timeMeridiem: Yup.string().required("Meridiem is required. "),
     timeMinute: Yup.number()
       .min(0, "Select minutes from 0 to 59. ")
       .max(59, "Select minutes from 0 to 59. ")
       .required("Minute field is required. "),
-    numOfGuests: Yup.number()
-      .min(1, "At least one guest must be selected. ")
-      .max(10, "To reserve for more than 10 guests, contact us. ")
-      .required("Number of guests field is required. "),
   });
 
   const isDateValid = (year, month, day) => {
@@ -60,7 +58,7 @@ const FormReservation = () => {
             timeHour: "",
             timeMinute: "",
             timeMeridiem: "AM",
-            numOfGuests: "",
+            numOfGuests: numOfGuests,
           }}
           validationSchema={validationSchema}
           onSubmit={(values) => {
@@ -121,10 +119,10 @@ const FormReservation = () => {
                 </div>
               </div>
               <div className="numOfGuestsInput">
-                <label htmlFor="numOfGuests">Number of Guests</label>
-                <Field name="numOfGuests" />
-                <div className="errorWrap">
-                  <ErrorMessage className="errMsg" component="span" name="numOfGuests" />
+                <GuestNumberHandler numOfGuests={numOfGuests} setNumOfGuests={setNumOfGuests} />
+                <div className="hidden">
+                  <label htmlFor="numOfGuests">Number of Guests</label>
+                  <Field name="numOfGuests" />
                 </div>
               </div>
               <div className="reserveBtn">
