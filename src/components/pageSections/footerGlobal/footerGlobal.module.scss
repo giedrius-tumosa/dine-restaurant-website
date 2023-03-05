@@ -1,0 +1,48 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.footerGlobal {
+  background-color: #111;
+  color: v.$clr-tertiary-100;
+  text-align: center;
+  min-height: 440px;
+  @include m.flex_column;
+  align-items: center;
+  justify-content: center;
+
+  .footerContentWrapper {
+    @include m.flex_column;
+    gap: 2.63rem;
+  }
+  .footerTextWrap {
+    @include m.flex_column;
+    gap: 2rem;
+  }
+  .openTimes {
+    @include m.flex_column;
+  }
+
+  @media screen and (min-width: 768px) {
+    text-align: start;
+    min-height: 328px;
+
+    .footerContentWrapper {
+      flex-direction: row;
+      width: 100%;
+      gap: 8.125rem;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    text-align: start;
+    min-height: 240px;
+
+    .footerContentWrapper {
+      gap: 12rem;
+    }
+    .footerTextWrap {
+      flex-direction: row;
+      gap: 7.75rem;
+    }
+  }
+}

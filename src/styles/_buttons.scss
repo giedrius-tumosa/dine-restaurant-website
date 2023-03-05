@@ -1,0 +1,37 @@
+@use "./variables" as v;
+
+.btn-onDark {
+  padding: 25px 48px;
+  border: 1px solid v.$clr-tertiary-100;
+  background-color: unset;
+  color: v.$clr-tertiary-100;
+  cursor: pointer;
+
+  &:hover {
+    background-color: v.$clr-tertiary-100;
+    color: inherit; //kaip padaryti, kad butu background color
+  }
+
+  &:disabled {
+    opacity: 0.25;
+    cursor: not-allowed;
+  }
+}
+
+.btn-onLight {
+  padding: 25px 48px;
+  border: 1px solid v.$clr-primary-800;
+  background-color: unset;
+  color: v.$clr-primary-800;
+  cursor: pointer;
+
+  &:hover {
+    background-color: v.$clr-primary-800;
+    color: v.$clr-tertiary-100; //kaip padaryti, kad butu background color
+  }
+
+  &:disabled {
+    opacity: 0.25;
+    cursor: not-allowed;
+  }
+}

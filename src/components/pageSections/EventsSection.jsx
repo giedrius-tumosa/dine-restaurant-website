@@ -1,37 +1,14 @@
 import ButtonBooking from "../global/ButtonBooking";
 import Heading from "../global/Heading";
 import FigureImage from "../global/FigureImage";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import ListItem from "../global/ListItem";
-import FamilyGatheringImg from "../../images/homepage/family-gathering-mobile.jpg";
-import SpecialEventsImg from "../../images/homepage/special-events-mobile.jpg";
-import SocialEvents from "../../images/homepage/social-events-mobile.jpg";
+import TextContentContext from "../store/TextContentContext";
 
 const EventsSection = () => {
-  const [events, setEvents] = useState([
-    {
-      title: "family gathering",
-      descripttion:
-        "We love catering for entire families. So please bring everyone along for a special meal with your loved ones. We’ll provide a memorable experience for all.",
-      id: "1-56854",
-      imgUrl: FamilyGatheringImg,
-    },
-    {
-      title: "special events",
-      descripttion:
-        "Whether it’s a romantic dinner or special date you’re celebrating with others we’ll look after you. We’ll be sure to mark your special date with an unforgettable meal.",
-      id: "2-98569",
-      imgUrl: SpecialEventsImg,
-    },
-    {
-      title: "social events",
-      descripttion:
-        "Are you looking to have a larger social event? No problem! We’re more than happy to cater for big parties. We’ll work with you to make your event a hit with everyone.",
-      id: "3-54124",
-      imgUrl: SocialEvents,
-    },
-  ]);
-  const [selectedEvent, setSelectedEvent] = useState(events[0]);
+  const { textContent } = useContext(TextContentContext);
+
+  const [selectedEvent, setSelectedEvent] = useState(textContent.home.events[0]);
   const [animateClass, setAnimateClass] = useState("");
 
   const handleEventSelection = (event) => {
@@ -59,7 +36,7 @@ const EventsSection = () => {
       <div className="eventNavWrap">
         <nav className="eventNav">
           <ul>
-            {events.map((event) => (
+            {textContent.home.events.map((event) => (
               <ListItem
                 key={event.id}
                 textContent={
@@ -78,7 +55,7 @@ const EventsSection = () => {
       </div>
       <div className={`eventInfoWrap ${animateClass}`}>
         <Heading tag="h3" textContent={selectedEvent.title} />
-        <p>{selectedEvent.descripttion}</p>
+        <p>{selectedEvent.description}</p>
       </div>
       <div className="eventButtonWrap">
         <ButtonBooking />

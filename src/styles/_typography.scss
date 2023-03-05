@@ -1,0 +1,53 @@
+@use "./variables" as v;
+
+.heading_xl {
+  font-size: v.$font-size-heading-XL;
+  font-weight: v.$font-weight-heading-XL;
+  line-height: v.$line-height-heading-XL;
+  letter-spacing: v.$letter-spacing-heading-XL;
+}
+.heading_l {
+  font-size: v.$font-size-heading-L;
+  font-weight: v.$font-weight-heading-L;
+  line-height: v.$line-height-heading-L;
+  letter-spacing: v.$letter-spacing-heading-L;
+}
+.heading_m {
+  font-size: v.$font-size-heading-M;
+  font-weight: v.$font-weight-heading-M;
+  line-height: v.$line-height-heading-M;
+  letter-spacing: v.$letter-spacing-heading-M;
+}
+.heading_s {
+  font-size: v.$font-size-heading-S;
+  font-weight: v.$font-weight-heading-S;
+  line-height: v.$line-height-heading-S;
+  letter-spacing: v.$letter-spacing-heading-S;
+  text-transform: uppercase;
+}
+.body_1 {
+  font-size: v.$font-size-body-1;
+  font-weight: v.$font-weight-body-1;
+  line-height: v.$line-height-body-1;
+  letter-spacing: v.$letter-spacing-body-1;
+}
+.body_2 {
+  font-size: v.$font-size-body-2;
+  font-weight: v.$font-weight-body-2;
+  line-height: v.$line-height-body-2;
+  letter-spacing: v.$letter-spacing-body-2;
+}
+.body_3 {
+  font-size: v.$font-size-body-3;
+  font-weight: v.$font-weight-body-3;
+  line-height: v.$line-height-body-3;
+  letter-spacing: v.$letter-spacing-body-3;
+  text-transform: uppercase;
+  font-style: normal;
+}
+.body_form {
+  font-size: v.$font-size-form;
+  font-weight: v.$font-weight-form;
+  line-height: v.$line-height-form;
+  letter-spacing: v.$letter-spacing-form;
+}

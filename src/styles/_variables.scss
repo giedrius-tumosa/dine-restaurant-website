@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800&display=swap");
+
+// COLORS
+
+// Color pallet
+
+$clr-primary-400: #9e7f66;
+$clr-primary-800: #111;
+
+$clr-secondary-400: #17192b;
+$clr-secondary-300: #242b37;
+$clr-secondary-200: #5c6779;
+
+$clr-tertiary-100: #fff;
+
+$clr-error: #b54949;
+
+// FONTS
+
+// Font family
+
+$family-font-global: "League Spartan", sans-serif;
+
+// Font size
+
+$font-size-heading-XL: 5rem; //80px
+$font-size-heading-L: 3rem; //48px
+$font-size-heading-M: 1.25rem; //20px
+$font-size-heading-S: 1.06rem; //17px
+
+$font-size-body-1: 1.25rem; //20px
+$font-size-body-2: 1rem; //16px
+$font-size-body-3: 0.875rem; //14px
+$font-size-form: 1.25rem;
+$font-size-error: 0.625rem;
+
+// Font weight
+
+$font-weight-heading-XL: 300;
+$font-weight-heading-L: 700;
+$font-weight-heading-M: 700;
+$font-weight-heading-S: 600;
+
+$font-weight-body-1: 400;
+$font-weight-body-2: 400;
+$font-weight-body-3: 400;
+$font-weight-form: 400;
+$font-weight-error: 500;
+
+// Line height
+
+$line-height-heading-XL: $font-size-heading-XL;
+$line-height-heading-L: $font-size-heading-L;
+$line-height-heading-M: 1.5rem; //24px
+$line-height-heading-S: 1.75rem; //28px
+$line-height-heading-S-alt: 1rem; //16px
+
+$line-height-body-1: 1.875rem; //30px
+$line-height-body-2: 1.625rem; //26px
+$line-height-body-3: 1.75rem; //28px
+$line-height-form: 1.75rem; //28px
+
+// Letter spacing
+
+$letter-spacing-heading-XL: -1px;
+$letter-spacing-heading-L: -0.5px;
+$letter-spacing-heading-M: -0.25px;
+$letter-spacing-heading-S: 2.5px;
+
+$letter-spacing-body-1: normal;
+$letter-spacing-body-2: normal;
+$letter-spacing-body-3: 2px;
+$letter-spacing-form: normal;
+$letter-spacing-error: -0.13px;
+
+// Other
+
+$text-decoration-body-3: uppercase;
+
+// LAYOUT
+
+$padding-inline-mobile: 1.5rem;
+$padding-inline-tablet: 2.5rem;
+$padding-inline-desktop: 10.31rem;
