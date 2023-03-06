@@ -23,55 +23,80 @@ $family-font-global: "League Spartan", sans-serif;
 
 // Font size
 
-$font-size-heading-XL: 5rem; //80px
-$font-size-heading-L: 3rem; //48px
-$font-size-heading-M: 1.25rem; //20px
-$font-size-heading-S: 1.06rem; //17px
+$fs-heading-XL-desk: 5rem; //80px
+$fs-heading-XL-tab: 3rem; //48px
+$fs-heading-XL-mob: 2rem; //32px
 
-$font-size-body-1: 1.25rem; //20px
-$font-size-body-2: 1rem; //16px
-$font-size-body-3: 0.875rem; //14px
-$font-size-form: 1.25rem;
-$font-size-error: 0.625rem;
+$fs-heading-L-desk: 3rem; //48px
+$fs-heading-L-mob: 2rem; //32px
+
+$fs-heading-M-desk: 1.25rem; //20px
+
+$fs-heading-S-desk: 1.06rem; //17px
+
+$fs-body-1-desk: 1.25rem; //20px
+$fs-body-1-mob: 1rem; //16px
+
+$fs-body-2: 1rem; //16px
+$fs-body-3: 0.875rem; //14px
+$fs-form: 1.25rem;
+$fs-error: 0.625rem;
 
 // Font weight
 
-$font-weight-heading-XL: 300;
-$font-weight-heading-L: 700;
-$font-weight-heading-M: 700;
-$font-weight-heading-S: 600;
+$fw-heading-XL-desk: 300;
+$fw-heading-L-desk: 700;
+$fw-heading-M-desk: 700;
+$fw-heading-S-desk: 600;
 
-$font-weight-body-1: 400;
-$font-weight-body-2: 400;
-$font-weight-body-3: 400;
-$font-weight-form: 400;
-$font-weight-error: 500;
+$fw-body-1: 400;
+$fw-body-2: 400;
+$fw-body-3: 400;
+$fw-form: 400;
+$fw-error: 500;
 
 // Line height
 
-$line-height-heading-XL: $font-size-heading-XL;
-$line-height-heading-L: $font-size-heading-L;
-$line-height-heading-M: 1.5rem; //24px
-$line-height-heading-S: 1.75rem; //28px
-$line-height-heading-S-alt: 1rem; //16px
+$lh-heading-XL-desk: $fs-heading-XL-desk;
+$lh-heading-XL-tab: 4rem; //64px
+$lh-heading-XL-mob: 2.5rem; //40px
 
-$line-height-body-1: 1.875rem; //30px
-$line-height-body-2: 1.625rem; //26px
-$line-height-body-3: 1.75rem; //28px
-$line-height-form: 1.75rem; //28px
+$lh-heading-L-desk: $fs-heading-L-desk;
+$lh-heading-L-tab: $fs-heading-L-desk;
+$lh-heading-L-mob: 2.5rem; // 40px
+
+$lh-heading-M-desk: 1.5rem; //24px
+
+$lh-heading-S-desk: 1.75rem; //28px
+
+$lh-heading-S-alt: 1rem; //16px
+
+$lh-body-1-desk: 1.875rem; //30px
+$lh-body-1-mob: 1.625rem; //26px
+
+$lh-body-2: 1.625rem; //26px
+$lh-body-3: 1.75rem; //28px
+$lh-form: 1.75rem; //28px
 
 // Letter spacing
 
-$letter-spacing-heading-XL: -1px;
-$letter-spacing-heading-L: -0.5px;
-$letter-spacing-heading-M: -0.25px;
-$letter-spacing-heading-S: 2.5px;
+$ltsp-heading-XL-desk: -1px;
+$ltsp-heading-XL-tab: -0.6px;
+$ltsp-heading-XL-mob: -0.4px;
 
-$letter-spacing-body-1: normal;
-$letter-spacing-body-2: normal;
-$letter-spacing-body-3: 2px;
-$letter-spacing-form: normal;
-$letter-spacing-error: -0.13px;
+$ltsp-heading-L-desk: -0.5px;
+$ltsp-heading-L-tab: -0.5px;
+$ltsp-heading-L-mob: -0.4px;
+
+$ltsp-heading-M-desk: -0.25px;
+
+$ltsp-heading-S-desk: 2.5px;
+
+$ltsp-body-1: normal;
+$ltsp-body-2: normal;
+$ltsp-body-3: 2px;
+$ltsp-form: normal;
+$ltsp-error: -0.13px;
 
 // Other
 
@@ -82,3 +107,5 @@ $text-decoration-body-3: uppercase;
 $padding-inline-mobile: 1.5rem;
 $padding-inline-tablet: 2.5rem;
 $padding-inline-desktop: 10.31rem;
+
+$max-page-content-width: 1440px;

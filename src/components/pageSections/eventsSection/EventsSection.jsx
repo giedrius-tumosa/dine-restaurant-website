@@ -1,9 +1,9 @@
-import ButtonBooking from "../global/ButtonBooking";
-import Heading from "../global/Heading";
-import FigureImage from "../global/FigureImage";
+import ButtonBooking from "../../global/ButtonBooking";
+import Heading from "../../global/Heading";
+import FigureImage from "../../global/FigureImage";
 import { useState, useContext } from "react";
-import ListItem from "../global/ListItem";
-import TextContentContext from "../store/TextContentContext";
+import ListItem from "../../global/ListItem";
+import TextContentContext from "../../store/TextContentContext";
 
 const EventsSection = () => {
   const { textContent } = useContext(TextContentContext);

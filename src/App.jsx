@@ -1,13 +1,7 @@
 import "./styles/App.scss";
-import FooterGlobal from "./components/pageSections/footerGlobal/FooterGlobal";
-import EventsSection from "./components/pageSections/EventsSection";
 
 function App() {
-  return (
-    <>
-      <FooterGlobal />
-    </>
-  );
+  return <></>;
 }
 
 export default App;

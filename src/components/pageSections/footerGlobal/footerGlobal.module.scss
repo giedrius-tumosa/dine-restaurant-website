@@ -13,6 +13,7 @@
   .footerContentWrapper {
     @include m.flex_column;
     gap: 2.63rem;
+    max-width: v.$max-page-content-width;
   }
   .footerTextWrap {
     @include m.flex_column;
