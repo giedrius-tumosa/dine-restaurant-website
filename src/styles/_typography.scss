@@ -58,7 +58,7 @@
   line-height: v.$lh-body-1-mob;
   letter-spacing: v.$ltsp-body-1;
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 768px) {
     font-size: v.$fs-body-1-desk;
     line-height: v.$lh-body-1-desk;
   }

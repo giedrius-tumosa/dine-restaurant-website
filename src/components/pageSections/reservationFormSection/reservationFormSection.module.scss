@@ -1,0 +1,122 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.reservationFormSection {
+  min-height: 534px;
+
+  form {
+    width: min(560px, 100%);
+    background-color: v.$clr-tertiary-100;
+    padding-inline: 2rem;
+    padding-block: 34px;
+    margin-inline: auto;
+    margin-top: -120px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    box-shadow: v.$box-shadow-general;
+
+    input,
+    .meridiemDisplay {
+      @include m.standard_input;
+      @include m.form_font;
+      padding-left: 1rem;
+    }
+
+    .labelText {
+      @include m.form_font;
+    }
+  }
+
+  .meridiemDisplay {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .meridiemOptions {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transform: translateY(100%);
+    background-color: #ffffff;
+    width: 100%;
+    box-shadow: v.$box-shadow-100;
+
+    .option {
+      padding: 10px;
+      cursor: pointer;
+      &:hover {
+        background: #d8d8d8;
+      }
+    }
+  }
+  .tick {
+    display: inline-block;
+    min-width: 1rem;
+  }
+  .reserveBtn {
+    background-color: #111;
+    border: 1px solid #111;
+
+    button {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: none;
+      padding-inline: 1rem;
+    }
+  }
+}
+.minusBtn button,
+.plusBtn button {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.numOfGuestsInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-inline: auto;
+  width: 100%;
+  @include m.standard_input;
+
+  .guestNumberHandler {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    .numOfGuestsDisplay {
+      @include m.form_font;
+      font-weight: 700;
+    }
+  }
+}
+
+// Utilities
+
+.flipped {
+  rotate: 180deg;
+}
+
+.hide {
+  display: none;
+}
+.unhide {
+  display: block;
+}
+.flexWrap {
+  display: flex;
+  gap: 1rem;
+
+  & > * {
+    flex: 1;
+  }
+}

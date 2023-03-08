@@ -1,4 +1,5 @@
 @use "./variables" as v;
+@use "./mixins" as m;
 
 .btn-onDark {
   padding: 25px 48px;
@@ -6,10 +7,14 @@
   background-color: unset;
   color: v.$clr-tertiary-100;
   cursor: pointer;
+  width: 248px;
+  height: 64px;
+
+  @include m.btn_text;
 
   &:hover {
     background-color: v.$clr-tertiary-100;
-    color: inherit; //kaip padaryti, kad butu background color
+    color: inherit;
   }
 
   &:disabled {
@@ -24,10 +29,14 @@
   background-color: unset;
   color: v.$clr-primary-800;
   cursor: pointer;
+  width: 248px;
+  height: 64px;
+
+  @include m.btn_text;
 
   &:hover {
     background-color: v.$clr-primary-800;
-    color: v.$clr-tertiary-100; //kaip padaryti, kad butu background color
+    color: v.$clr-tertiary-100;
   }
 
   &:disabled {

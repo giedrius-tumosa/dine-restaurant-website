@@ -5,6 +5,8 @@ input,
 button,
 textarea {
   font-family: v.$family-font-global;
+  outline: none;
+  display: block;
 }
 
 .hidden {
@@ -29,7 +31,19 @@ textarea {
 }
 
 #root {
-  & > * {
+  min-height: 100vh;
+
+  .pageWrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    main {
+      flex: 1;
+    }
+  }
+
+  .pageWrapper > * {
     padding-inline: v.$padding-inline-mobile;
 
     @media screen and (min-width: 768px) {
@@ -40,3 +54,5 @@ textarea {
     }
   }
 }
+
+// Reservation page

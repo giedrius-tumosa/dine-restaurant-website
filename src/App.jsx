@@ -1,7 +1,12 @@
 import "./styles/App.scss";
+import ReservationPage from "./components/pages/ReservationPage";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <ReservationPage />
+    </>
+  );
 }
 
 export default App;

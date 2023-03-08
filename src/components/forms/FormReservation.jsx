@@ -2,11 +2,14 @@ import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useState } from "react";
 import GuestNumberHandler from "./formComponents/GuestNumberHandler";
+import styles from "../pageSections/reservationFormSection/reservationFormSection.module.scss";
+import MeridiemSelect from "./formComponents/MeridiemSelect";
 
 const FormReservation = () => {
   const [currentYear] = useState(new Date().getFullYear());
   const [formError, setFormError] = useState("");
   const [numOfGuests, setNumOfGuests] = useState(1);
+  const [meridiem, setMeridiem] = useState("AM");
 
   const validationSchema = Yup.object().shape({
     name: Yup.string().min(2, "Too short.").max(20, "Too long. ").required("Name is required. "),
@@ -45,8 +48,7 @@ const FormReservation = () => {
 
   return (
     <>
-      <div className="formReservation">
-        <h1>Reservation</h1>
+      <div className="formReservation" id="formReservation">
         <Formik
           enableReinitialize
           initialValues={{
@@ -57,7 +59,7 @@ const FormReservation = () => {
             dateYear: currentYear,
             timeHour: "",
             timeMinute: "",
-            timeMeridiem: "AM",
+            timeMeridiem: meridiem,
             numOfGuests: numOfGuests,
           }}
           validationSchema={validationSchema}
@@ -84,13 +86,15 @@ const FormReservation = () => {
                   <ErrorMessage className="errMsg" component="span" name="email" />
                 </div>
               </div>
-              <div className="dateInput">
+              <div className={styles.dateInput}>
                 <div className="dateLabel">
                   <label>
-                    Pick a date
-                    <Field name="dateMonth" placeholder="MM" />
-                    <Field name="dateDay" placeholder="DD" />
-                    <Field name="dateYear" placeholder="YYYY" />
+                    <p className={styles.labelText}>Pick a date</p>
+                    <div className={styles.flexWrap}>
+                      <Field name="dateMonth" placeholder="MM" />
+                      <Field name="dateDay" placeholder="DD" />
+                      <Field name="dateYear" placeholder="YYYY" />
+                    </div>
                   </label>
                   <div className="errorWrap">
                     <ErrorMessage className="errMsg" component="span" name="dateMonth" />
@@ -100,17 +104,15 @@ const FormReservation = () => {
                   </div>
                 </div>
               </div>
-              <div className="timeInput">
+              <div className={styles.timeInput}>
                 <div className="timeLabel">
-                  <label>
-                    Pick a time
+                  <p className={styles.labelText}>Pick a time</p>
+                  <div className={styles.flexWrap}>
                     <Field name="timeHour" placeholder="09" />
                     <Field name="timeMinute" placeholder="00" />
-                    <Field as="select" name="timeMeridiem">
-                      <option value="AM">AM</option>
-                      <option value="PM">PM</option>
-                    </Field>
-                  </label>
+                    <Field className={styles.hide} name="timeMeridiem" value={meridiem} />
+                    <MeridiemSelect meridiem={meridiem} setMeridiem={setMeridiem} />
+                  </div>
                   <div className="errorWrap">
                     <ErrorMessage className="errMsg" component="span" name="timeHour" />
                     <ErrorMessage className="errMsg" component="span" name="timeMinute" />
@@ -118,15 +120,17 @@ const FormReservation = () => {
                   </div>
                 </div>
               </div>
-              <div className="numOfGuestsInput">
+              <div className={styles.numOfGuestsInput}>
                 <GuestNumberHandler numOfGuests={numOfGuests} setNumOfGuests={setNumOfGuests} />
                 <div className="hidden">
                   <label htmlFor="numOfGuests">Number of Guests</label>
                   <Field name="numOfGuests" />
                 </div>
               </div>
-              <div className="reserveBtn">
-                <button type="submit">make reservation</button>
+              <div className={`${styles.reserveBtn}`}>
+                <button className="btn-onDark" type="submit">
+                  make reservation
+                </button>
               </div>
             </Form>
           )}

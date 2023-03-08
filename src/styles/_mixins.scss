@@ -1,6 +1,27 @@
+@use "./variables" as v;
+
 // Layout
 
 @mixin flex_column {
   display: flex;
   flex-direction: column;
+}
+
+@mixin btn_text {
+  text-transform: uppercase;
+  line-height: 1rem;
+  font-size: 1.06rem;
+  letter-spacing: 2.5px;
+}
+@mixin standard_input {
+  height: 43px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid v.$clr-form-input-border;
+}
+@mixin form_font {
+  font-size: v.$fs-form;
+  font-weight: v.$fw-form;
+  line-height: v.$lh-form;
+  letter-spacing: v.$ltsp-form;
 }
