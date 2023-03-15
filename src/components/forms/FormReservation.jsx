@@ -4,6 +4,7 @@ import { useState } from "react";
 import GuestNumberHandler from "./formComponents/GuestNumberHandler";
 import styles from "../pageSections/reservationFormSection/reservationFormSection.module.scss";
 import MeridiemSelect from "./formComponents/MeridiemSelect";
+import Lines from "../../images/patterns/pattern-lines.svg";
 
 const FormReservation = () => {
   const [currentYear] = useState(new Date().getFullYear());
@@ -48,7 +49,7 @@ const FormReservation = () => {
 
   return (
     <>
-      <div className="formReservation" id="formReservation">
+      <div className={styles.formReservation} id="formReservation">
         <Formik
           enableReinitialize
           initialValues={{
@@ -76,7 +77,7 @@ const FormReservation = () => {
             <Form>
               <div className="nameInput">
                 <Field name="name" placeholder="Name" />
-                <div className="errorWrap">
+                <div className={styles.errorWrap}>
                   <ErrorMessage className="errMsg" component="span" name="name" />
                 </div>
               </div>
@@ -87,16 +88,14 @@ const FormReservation = () => {
                 </div>
               </div>
               <div className={styles.dateInput}>
-                <div className="dateLabel">
-                  <label>
-                    <p className={styles.labelText}>Pick a date</p>
-                    <div className={styles.flexWrap}>
-                      <Field name="dateMonth" placeholder="MM" />
-                      <Field name="dateDay" placeholder="DD" />
-                      <Field name="dateYear" placeholder="YYYY" />
-                    </div>
-                  </label>
-                  <div className="errorWrap">
+                <div className={styles.dateLabel}>
+                  <p className={styles.labelText}>Pick a date</p>
+                  <div className={styles.fieldWrap}>
+                    <Field name="dateMonth" placeholder="MM" />
+                    <Field name="dateDay" placeholder="DD" />
+                    <Field name="dateYear" placeholder="YYYY" />
+                  </div>
+                  <div className={styles.errorWrap}>
                     <ErrorMessage className="errMsg" component="span" name="dateMonth" />
                     <ErrorMessage className="errMsg" component="span" name="dateDay" />
                     <ErrorMessage className="errMsg" component="span" name="dateYear" />
@@ -105,15 +104,15 @@ const FormReservation = () => {
                 </div>
               </div>
               <div className={styles.timeInput}>
-                <div className="timeLabel">
+                <div className={styles.timeLabel}>
                   <p className={styles.labelText}>Pick a time</p>
-                  <div className={styles.flexWrap}>
+                  <div className={styles.fieldWrap}>
                     <Field name="timeHour" placeholder="09" />
                     <Field name="timeMinute" placeholder="00" />
                     <Field className={styles.hide} name="timeMeridiem" value={meridiem} />
                     <MeridiemSelect meridiem={meridiem} setMeridiem={setMeridiem} />
                   </div>
-                  <div className="errorWrap">
+                  <div className={styles.errorWrap}>
                     <ErrorMessage className="errMsg" component="span" name="timeHour" />
                     <ErrorMessage className="errMsg" component="span" name="timeMinute" />
                     <ErrorMessage className="errMsg" component="span" name="timeMeridiem" />
@@ -135,6 +134,9 @@ const FormReservation = () => {
             </Form>
           )}
         </Formik>
+        <div className={styles.lines}>
+          <img src={Lines} alt="Decorative lines." />
+        </div>
       </div>
     </>
   );

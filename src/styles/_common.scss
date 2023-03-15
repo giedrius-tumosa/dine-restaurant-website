@@ -13,22 +13,22 @@ textarea {
   display: none;
 }
 
-.hide_appear {
-  animation-name: hide-animation;
-  animation-duration: 0.5s;
-}
+// .hide_appear {
+//   animation-name: hide-animation;
+//   // animation-duration: 5s;
+// }
 
-@keyframes hide-animation {
-  0% {
-    opacity: 100%;
-  }
-  50% {
-    opacity: 0%;
-  }
-  100% {
-    opacity: 100%;
-  }
-}
+// @keyframes hide-animation {
+//   0% {
+//     opacity: 100%;
+//   }
+//   50% {
+//     opacity: 0%;
+//   }
+//   100% {
+//     opacity: 100%;
+//   }
+// }
 
 #root {
   min-height: 100vh;
@@ -44,13 +44,21 @@ textarea {
   }
 
   .pageWrapper > * {
-    padding-inline: v.$padding-inline-mobile;
-
-    @media screen and (min-width: 768px) {
-      padding-inline: v.$padding-inline-tablet;
+    & > * {
+      margin: 0 auto;
     }
-    @media screen and (min-width: 1440px) {
-      padding-inline: v.$padding-inline-desktop;
+  }
+  .pageWrapper {
+    & > * > * {
+      width: min(1440px, 100%);
+      padding-inline: v.$padding-inline-mobile;
+
+      @media screen and (min-width: 768px) {
+        padding-inline: v.$padding-inline-tablet;
+      }
+      @media screen and (min-width: 1440px) {
+        padding-inline: v.$padding-inline-desktop;
+      }
     }
   }
 }

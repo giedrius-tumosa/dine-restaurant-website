@@ -1,9 +1,10 @@
 import ButtonBooking from "../../global/ButtonBooking";
 import Heading from "../../global/Heading";
-import FigureImage from "../../global/FigureImage";
 import { useState, useContext } from "react";
 import ListItem from "../../global/ListItem";
 import TextContentContext from "../../store/TextContentContext";
+import PictureImage from "../../global/PictureImage";
+import styles from "./eventsSection.module.scss";
 
 const EventsSection = () => {
   const { textContent } = useContext(TextContentContext);
@@ -23,42 +24,64 @@ const EventsSection = () => {
   };
 
   return (
-    <section className="eventsSection">
-      <div className="eventImgWrap">
-        <FigureImage
-          className={`eventImg ${animateClass}`}
-          src={selectedEvent.imgUrl}
-          alt="Restaurant event image."
-          width={300}
-          height="auto"
+    <section className={styles.eventsSection}>
+      <div className={styles.eventImgWrap}>
+        <PictureImage
+          className={styles.eventPicture}
+          sources={[
+            {
+              media: "(min-width: 1440px)",
+              srcSet: `${selectedEvent.imgUrl_Desk} 540w, 
+              ${selectedEvent.imgUrl_Desk2x} 1080w`,
+            },
+            {
+              media: "(min-width: 768px)",
+              srcSet: `${selectedEvent.imgUrl_Tab} 573w, 
+              ${selectedEvent.imgUrl_Tab2x} 1146w`,
+            },
+            {
+              media: "(min-width: 375px)",
+              srcSet: `${selectedEvent.imgUrl_Mob} 326w, 
+              ${selectedEvent.imgUrl_Mob2x} 652w`,
+            },
+          ]}
+          img={{
+            src: `${selectedEvent.imgUrl_Desk}`,
+            alt: "Restaurant event image.",
+            width: 300,
+            height: "auto",
+          }}
         />
       </div>
-      <div className="eventNavWrap">
-        <nav className="eventNav">
-          <ul>
-            {textContent.home.events.map((event) => (
-              <ListItem
-                key={event.id}
-                textContent={
-                  <button
-                    type="button"
-                    onClick={() => handleEventSelection(event)}
-                    disabled={event.id === selectedEvent.id}
-                  >
-                    {event.title}
-                  </button>
-                }
-              />
-            ))}
-          </ul>
-        </nav>
-      </div>
-      <div className={`eventInfoWrap ${animateClass}`}>
-        <Heading tag="h3" textContent={selectedEvent.title} />
-        <p>{selectedEvent.description}</p>
-      </div>
-      <div className="eventButtonWrap">
-        <ButtonBooking />
+      <div className={styles.flexwrap}>
+        <div className={styles.eventNavWrap}>
+          <nav className={styles.eventNav}>
+            <ul>
+              {textContent.home.events.map((event) => (
+                <ListItem
+                  key={event.id}
+                  textContent={
+                    <button
+                      className="heading_s"
+                      type="button"
+                      onClick={() => handleEventSelection(event)}
+                      disabled={event.id === selectedEvent.id}
+                    >
+                      {event.title}
+                    </button>
+                  }
+                />
+              ))}
+            </ul>
+          </nav>
+        </div>
+        <div className={`${styles.eventInfoWrap} ${animateClass}`}>
+          <Heading className="heading_l" tag="h3" textContent={selectedEvent.title} />
+          <p className="body_1">{selectedEvent.description}</p>
+        </div>
+        <div className={styles.eventButtonWrap}>
+          <ButtonBooking className={`btn-onLight ${styles.revertBtn}`} />
+        </div>
       </div>
     </section>
   );

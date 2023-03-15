@@ -9,6 +9,10 @@
   @include m.flex_column;
   align-items: center;
   justify-content: center;
+  .companyLogo {
+    width: fit-content;
+    align-self: center;
+  }
 
   .footerContentWrapper {
     @include m.flex_column;
@@ -31,6 +35,9 @@
       flex-direction: row;
       width: 100%;
       gap: 8.125rem;
+    }
+    .companyLogo {
+      align-self: flex-start;
     }
   }
 

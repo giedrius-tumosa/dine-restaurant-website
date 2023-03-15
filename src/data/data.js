@@ -1,6 +1,29 @@
-import FamilyGatheringImg from "../images/homepage/family-gathering-mobile.jpg";
-import SpecialEventsImg from "../images/homepage/special-events-mobile.jpg";
-import SocialEvents from "../images/homepage/social-events-mobile.jpg";
+import {
+  familyGathering_Desk,
+  familyGathering_Desk2x,
+  familyGathering_Mob,
+  familyGathering_Mob2x,
+  familyGathering_Tab,
+  familyGathering_Tab2x,
+  specialEvents_Desk,
+  specialEvents_Desk2x,
+  specialEvents_Mob,
+  specialEvents_Mob2x,
+  specialEvents_Tab,
+  specialEvents_Tab2x,
+  socialEvents_Desk,
+  socialEvents_Desk2x,
+  socialEvents_Mob,
+  socialEvents_Mob2x,
+  socialEvents_Tab,
+  socialEvents_Tab2x,
+  ready_Desk,
+  ready_Desk2x,
+  ready_Mob,
+  ready_Mob2x,
+  ready_Tab,
+  ready_Tab2x,
+} from "./imageData";
 
 
 export const siteTextContent = {
@@ -17,27 +40,47 @@ export const siteTextContent = {
 
   },
   home: {
+    ready:
+    {
+      title: "Ready to make a reservation?"
+    }
+    ,
     events: [
       {
         title: "family gathering",
-        descripttion:
+        description:
           "We love catering for entire families. So please bring everyone along for a special meal with your loved ones. We’ll provide a memorable experience for all.",
         id: "1-56854",
-        imgUrl: FamilyGatheringImg,
+        imgUrl_Desk: familyGathering_Desk,
+        imgUrl_Desk2x: familyGathering_Desk2x,
+        imgUrl_Mob: familyGathering_Mob,
+        imgUrl_Mob2x: familyGathering_Mob2x,
+        imgUrl_Tab: familyGathering_Tab,
+        imgUrl_Tab2x: familyGathering_Tab2x,
       },
       {
         title: "special events",
-        descripttion:
+        description:
           "Whether it’s a romantic dinner or special date you’re celebrating with others we’ll look after you. We’ll be sure to mark your special date with an unforgettable meal.",
         id: "2-98569",
-        imgUrl: SpecialEventsImg,
+        imgUrl_Desk: specialEvents_Desk,
+        imgUrl_Desk2x: specialEvents_Desk2x,
+        imgUrl_Mob: specialEvents_Mob,
+        imgUrl_Mob2x: specialEvents_Mob2x,
+        imgUrl_Tab: specialEvents_Tab,
+        imgUrl_Tab2x: specialEvents_Tab2x,
       },
       {
         title: "social events",
-        descripttion:
+        description:
           "Are you looking to have a larger social event? No problem! We’re more than happy to cater for big parties. We’ll work with you to make your event a hit with everyone.",
         id: "3-54124",
-        imgUrl: SocialEvents,
+        imgUrl_Desk: socialEvents_Desk,
+        imgUrl_Desk2x: socialEvents_Desk2x,
+        imgUrl_Mob: socialEvents_Mob,
+        imgUrl_Mob2x: socialEvents_Mob2x,
+        imgUrl_Tab: socialEvents_Tab,
+        imgUrl_Tab2x: socialEvents_Tab2x,
       },
     ]
   },

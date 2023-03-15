@@ -1,0 +1,28 @@
+@use "../../../styles/variables" as v;
+
+.readySection {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  padding-block: 84px 80px;
+  position: relative;
+  background-image: url("../../../images/homepage/ready-bg-mobile.jpg");
+  background-size: cover;
+
+  @media screen and (min-width: 768px) {
+    background-image: url("../../../images/homepage/ready-bg-tablet.jpg");
+  }
+
+  @media screen and (min-width: 1440px) {
+    flex-direction: row;
+    justify-content: space-between;
+    background-image: url("../../../images/homepage/ready-bg-desktop.jpg");
+  }
+
+  .readyTitle {
+    text-transform: none;
+    color: v.$clr-tertiary-100;
+  }
+}

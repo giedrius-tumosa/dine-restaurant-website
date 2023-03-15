@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 
-const ButtonBooking = () => {
+const ButtonBooking = (props) => {
   return (
-    <div className="bookingBtn">
-      <Link to={"#"}>book a table</Link>
+    <div className={`bookingBtn ${props.className}`}>
+      <Link to={"/reservation"}>
+        <span>book a table</span>
+      </Link>
     </div>
   );
 };

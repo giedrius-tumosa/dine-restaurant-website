@@ -24,10 +24,12 @@
   font-weight: v.$fw-heading-L-desk;
   line-height: v.$lh-heading-L-mob;
   letter-spacing: v.$ltsp-heading-L-mob;
+  text-transform: capitalize;
 
   @media screen and (min-width: 768px) {
     line-height: v.$lh-heading-L-tab;
     letter-spacing: v.$ltsp-heading-L-tab;
+    font-size: v.$lh-heading-L-tab;
   }
 
   @media screen and (min-width: 1440px) {
@@ -42,6 +44,7 @@
   font-weight: v.$fw-heading-M-desk;
   line-height: v.$lh-heading-M-desk;
   letter-spacing: v.$ltsp-heading-M-desk;
+  text-transform: capitalize;
 }
 
 .heading_s {

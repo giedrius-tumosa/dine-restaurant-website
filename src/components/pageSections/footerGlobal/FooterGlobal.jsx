@@ -7,7 +7,7 @@ const FooterGlobal = () => {
   return (
     <footer className={styles.footerGlobal}>
       <div className={styles.footerContentWrapper}>
-        <CompanyLogo />
+        <CompanyLogo className={styles.companyLogo} />
         <div className={styles.footerTextWrap}>
           <Contacts />
           <OpenTimes />
