@@ -1,0 +1,153 @@
+@use "../../../styles/variables" as v;
+
+.highlightsSection {
+  $padding-block-mobile: 72px 47px;
+  $padding-block-desktop: 200px 120px;
+
+  color: v.$clr-tertiary-100;
+  background-color: v.$clr-primary-800;
+  padding-block: $padding-block-mobile;
+  text-align: center;
+  @media screen and (min-width: 1440px) {
+    padding-block: $padding-block-desktop;
+  }
+
+  .contentWrapper {
+    $top-both: 0;
+    $left-both: 50%;
+    $translate-x: 1em;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5.3rem;
+    padding-top: 2rem;
+    position: relative;
+
+    @media screen and (min-width: 768px) {
+      gap: 1.875rem;
+    }
+    @media screen and (min-width: 1440px) {
+      flex-direction: row;
+      gap: 7.81rem;
+      padding-top: 3.44rem;
+    }
+
+    // Decorative circle
+    &::before {
+      content: "";
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      border: 1px solid v.$clr-primary-400;
+      top: $top-both;
+      left: $left-both;
+      transform: translate(calc(-8px - 100% - $translate-x), -50%);
+      @media screen and (min-width: 1440px) {
+        transform: translate(calc(-8px - 100%), -50%);
+        left: $translate-x;
+      }
+    }
+
+    // Decorative line
+    &::after {
+      content: "";
+      position: absolute;
+      width: 56px;
+      height: 0px;
+      border-top: 1px solid v.$clr-primary-400;
+      top: $top-both;
+      left: calc($left-both - $translate-x);
+      @media screen and (min-width: 1440px) {
+        left: $translate-x;
+      }
+    }
+
+    .sectionTextInfo {
+      @media screen and (min-width: 768px) {
+        max-width: 445px;
+        margin: 0 auto;
+      }
+      @media screen and (min-width: 1440px) {
+        text-align: start;
+      }
+    }
+  }
+
+  .menuItemList {
+    max-width: 573px;
+    margin: 0 auto;
+    li {
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid rgba($color: v.$clr-primary-400, $alpha: 0.15);
+      &:last-child {
+        border-bottom: none;
+      }
+      @media screen and (min-width: 768px) {
+        padding-block: 24px;
+        margin-bottom: 0rem;
+      }
+    }
+  }
+  .menuItemCard {
+    $gap-picToText: 2.25rem;
+    $gap-picToText-desk: 3.875rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: $gap-picToText;
+    min-height: 418px;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      min-height: unset;
+      text-align: start;
+      gap: $gap-picToText-desk;
+      width: fit-content;
+      padding-bottom: unset;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      max-width: 375px;
+      @media screen and (min-width: 768px) {
+        width: 128px;
+      }
+    }
+    .menuItemTitle {
+      margin-bottom: 0.375rem;
+      position: relative;
+      @media screen and (min-width: 1440px) {
+        &::before {
+          content: "";
+          position: absolute;
+          width: 32px;
+          height: 1px;
+          border-top: 1px solid v.$clr-primary-400;
+          top: 50%;
+          transform: translate(-$gap-picToText-desk, -50%);
+        }
+      }
+    }
+    .menuItemDescription {
+      padding-inline: 2rem;
+      max-width: 375px;
+
+      @media screen and (min-width: 768px) {
+        padding-inline: unset;
+        max-width: 383px;
+      }
+    }
+  }
+}
+.hightlightsTitle {
+  text-transform: none;
+  margin-bottom: 0.8rem;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 1.68rem;
+  }
+}

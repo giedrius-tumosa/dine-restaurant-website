@@ -6,7 +6,9 @@
   color: v.$clr-tertiary-100;
   text-align: center;
   min-height: 440px;
+  width: min(1440px, 100%);
   @include m.flex_column;
+  margin: 0 auto;
   align-items: center;
   justify-content: center;
   .companyLogo {

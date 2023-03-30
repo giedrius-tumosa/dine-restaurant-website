@@ -13,6 +13,7 @@
   gap: 3rem;
   align-items: center;
   position: relative;
+  overflow: hidden;
 
   @media screen and (min-width: 768px) {
     padding-block: $padding-block-tablet;
@@ -23,9 +24,6 @@
       top: 0;
       right: 50%;
       z-index: -1;
-      @media screen and (min-width: 1440px) {
-        right: 70%;
-      }
     }
   }
   @media screen and (min-width: 1440px) {

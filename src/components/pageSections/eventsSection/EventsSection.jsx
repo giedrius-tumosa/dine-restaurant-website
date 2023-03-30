@@ -10,17 +10,10 @@ const EventsSection = () => {
   const { textContent } = useContext(TextContentContext);
 
   const [selectedEvent, setSelectedEvent] = useState(textContent.home.events[0]);
-  const [animateClass, setAnimateClass] = useState("");
 
   const handleEventSelection = (event) => {
     if (event.id === selectedEvent.id) return;
-    setAnimateClass("hide_appear");
-    setTimeout(() => {
-      setSelectedEvent(event);
-    }, 100);
-    setTimeout(() => {
-      setAnimateClass("");
-    }, 200);
+    setSelectedEvent(event);
   };
 
   return (
@@ -75,7 +68,7 @@ const EventsSection = () => {
             </ul>
           </nav>
         </div>
-        <div className={`${styles.eventInfoWrap} ${animateClass}`}>
+        <div className={`${styles.eventInfoWrap}`}>
           <Heading className="heading_l" tag="h3" textContent={selectedEvent.title} />
           <p className="body_1">{selectedEvent.description}</p>
         </div>

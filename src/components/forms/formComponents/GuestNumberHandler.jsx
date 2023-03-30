@@ -35,5 +35,5 @@ const GuestNumberHandler = ({ numOfGuests, setNumOfGuests }) => {
     </>
   );
 };
-// TODO: max ir min number of guests pabandyti per status
+
 export default GuestNumberHandler;
