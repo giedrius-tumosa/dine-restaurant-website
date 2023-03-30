@@ -1,6 +1,7 @@
 {
   "name": "forms",
   "version": "0.1.0",
+  "homepage": "https://giedrius-tumosa.github.io/dine-restaurant-website",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -23,7 +24,9 @@
     "eject": "react-scripts eject",
     "live": "json-server --watch ./src/data/data.json --port 5000",
     "update": "npm i && react-scripts start",
-    "forms": "npm i yup && npm i formik"
+    "forms": "npm i yup && npm i formik",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -42,5 +45,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
