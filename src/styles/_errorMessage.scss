@@ -1,8 +1,0 @@
-@use "./variables" as v;
-
-.errMsg {
-  color: v.$clr-error;
-  font-size: v.$fs-error;
-  font-weight: v.$fw-error;
-  letter-spacing: v.$ltsp-error;
-}
