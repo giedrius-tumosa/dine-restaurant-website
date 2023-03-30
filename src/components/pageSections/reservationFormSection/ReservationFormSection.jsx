@@ -1,5 +1,5 @@
 import FormReservation from "../../forms/FormReservation";
-import styles from "./reservationFormSection.module.scss";
+import styles from "./reservFormSection.module.scss";
 
 const ReservationFormSection = () => {
   return (

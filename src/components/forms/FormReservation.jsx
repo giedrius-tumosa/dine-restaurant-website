@@ -2,7 +2,7 @@ import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useState } from "react";
 import GuestNumberHandler from "./formComponents/GuestNumberHandler";
-import styles from "../pageSections/reservationFormSection/reservationFormSection.module.scss";
+import styles from "../pageSections/reservationFormSection/reservFormSection.module.scss";
 import MeridiemSelect from "./formComponents/MeridiemSelect";
 import Lines from "../../images/patterns/pattern-lines.svg";
 

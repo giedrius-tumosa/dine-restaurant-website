@@ -1,6 +1,6 @@
 import PlusIcon from "../../../images/icons/icon-plus.svg";
 import MinusIcon from "../../../images/icons/icon-minus.svg";
-import styles from "../../pageSections/reservationFormSection/reservationFormSection.module.scss";
+import styles from "../../pageSections/reservationFormSection/reservFormSection.module.scss";
 
 const GuestNumberHandler = ({ numOfGuests, setNumOfGuests }) => {
   const handleMinus = () => {

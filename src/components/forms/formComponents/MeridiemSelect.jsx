@@ -1,7 +1,7 @@
 import { useState } from "react";
 import IconArrow from "../../../images/icons/icon-arrow.svg";
 import IconCheck from "../../../images/icons/icon-check.svg";
-import styles from "../../pageSections/reservationFormSection/reservationFormSection.module.scss";
+import styles from "../../pageSections/reservationFormSection/reservFormSection.module.scss";
 
 const MeridiemSelect = ({ meridiem, setMeridiem }) => {
   const [arrowClicked, setArrowClicked] = useState(false);
