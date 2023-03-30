@@ -7,8 +7,8 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/reservation" element={<ReservationPage />} />
+        <Route path="/dine-restaurant-website" element={<HomePage />} />
+        <Route path="/dine-restaurant-website/reservation" element={<ReservationPage />} />
       </Routes>
     </>
   );
