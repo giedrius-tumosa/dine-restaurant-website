@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/dine-restaurant-website/static/css/main.75ab0c9e.css",
+    "main.css": "/dine-restaurant-website/static/css/main.036115ac.css",
     "main.js": "/dine-restaurant-website/static/js/main.efd94fd0.js",
     "static/media/enjoyable-place-desktop@2x.jpg": "/dine-restaurant-website/static/media/enjoyable-place-desktop@2x.7db677c38aa29ae27f36.jpg",
     "static/media/enjoyable-place-tablet@2x.jpg": "/dine-restaurant-website/static/media/enjoyable-place-tablet@2x.d7d64f09d1e4013d7ca3.jpg",
@@ -61,11 +61,11 @@
     "static/media/icon-check.svg": "/dine-restaurant-website/static/media/icon-check.4c96871bb2a6f92bce9240d148c5f940.svg",
     "static/media/icon-arrow.svg": "/dine-restaurant-website/static/media/icon-arrow.0504e5dcf07c2adf8e1e562d2ad53919.svg",
     "static/media/icon-minus.svg": "/dine-restaurant-website/static/media/icon-minus.a1f316e703a5cea62cb6cc8823797a0a.svg",
-    "main.75ab0c9e.css.map": "/dine-restaurant-website/static/css/main.75ab0c9e.css.map",
+    "main.036115ac.css.map": "/dine-restaurant-website/static/css/main.036115ac.css.map",
     "main.efd94fd0.js.map": "/dine-restaurant-website/static/js/main.efd94fd0.js.map"
   },
   "entrypoints": [
-    "static/css/main.75ab0c9e.css",
+    "static/css/main.036115ac.css",
     "static/js/main.efd94fd0.js"
   ]
 }
